@@ -12,6 +12,7 @@
     "lodash": "^4.17.2",
     "lost": "^8.0.0",
     "moment": "^2.18.1",
+    "node-fetch": "^1.6.3",
     "react-addons-shallow-compare": "^15.5.2",
     "react-dates": "^4.1.0",
     "react-helmet": "^3.2.2",
@@ -36,6 +37,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
+    "fetch": "node scripts/fetch",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
