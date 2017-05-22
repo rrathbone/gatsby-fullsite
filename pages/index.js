@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Helmet from "react-helmet"
 import { config } from 'config'
 import include from 'underscore.string/include'
+import "../styles/main.scss"
 
 import Header from '../components/common/header'
 import Footer from '../components/common/footer'
