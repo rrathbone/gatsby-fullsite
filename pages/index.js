@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 import sortBy from 'lodash/sortBy'
 import get from 'lodash/get'
-import { prefixLink } from 'gatsby-helpers'
-import { rhythm } from 'utils/typography'
 import Helmet from "react-helmet"
 import { config } from 'config'
 import include from 'underscore.string/include'
-import Bio from 'components/Bio'
 
-import '../css/main.css'
+import Header from '../components/common/header'
+import Footer from '../components/common/footer'
 
-class BlogIndex extends React.Component {
+class HomePage extends Component {
   render () {
     // Sort pages.
     const sortedPages = sortBy(this.props.route.pages, 'data.date')
@@ -28,28 +26,17 @@ class BlogIndex extends React.Component {
             {"name": "keywords", "content": "blog, articles"},
           ]}
         />
-        <Bio />
-        <ul>
-          {visiblePages.map((page) => (
-              <li
-                key={page.path}
-                style={{
-                    marginBottom: rhythm(1/4),
-                }}
-              >
-                <Link style={{boxShadow: 'none'}} to={prefixLink(page.path)}>
-                    {get(page, 'data.title', page.path)}
-                </Link>
-              </li>
-          ))}
-        </ul>
+        <Header />
+        <h1>Home page goes here</h1>
+        <Footer />
+
       </div>
     )
   }
 }
 
-BlogIndex.propTypes = {
-  route: React.PropTypes.object,
+HomePage.propTypes = {
+  route: PropTypes.object,
 }
 
-export default BlogIndex
+export default HomePage

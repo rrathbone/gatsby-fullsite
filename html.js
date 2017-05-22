@@ -1,15 +1,14 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
+
 import Helmet from "react-helmet"
 import { prefixLink } from 'gatsby-helpers'
-import { GoogleFont, TypographyStyle } from 'react-typography'
-import typography from './utils/typography'
 
 const BUILD_TIME = new Date().getTime()
 
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
-    body: React.PropTypes.string
+    body: PropTypes.string
   },
 
   render () {
@@ -34,8 +33,6 @@ module.exports = React.createClass({
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
           {css}
         </head>
         <body>

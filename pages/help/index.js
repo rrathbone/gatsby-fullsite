@@ -1,16 +1,19 @@
 import React, { Component } from 'react'
 
 import Header from '../../components/common/header.js'
+import Footer from '../../components/common/footer.js'
 
 class Help extends Component {
   render () {
     return (
-      <div className="careers-page">
+      <div className="help-page">
       <Header />
 
-      <section id="careers-page">
+      <section id="help-page">
         <h1>Help page</h1>
       </section>
+
+      <Footer />
 
     </div>
     )

@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
 
 import Header from '../../components/common/header.js'
+import Footer from '../../components/common/footer.js'
 
 class Ride extends Component {
   render () {
     return (
-      <div className="careers-page">
+      <div className="ride-page">
       <Header />
 
-      <section id="careers-page">
+      <section id="ride-page">
         <h1>Ride page</h1>
       </section>
 
+      <Footer />
     </div>
     )
   }

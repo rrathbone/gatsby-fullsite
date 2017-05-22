@@ -1,15 +1,13 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
-import { rhythm, scale } from 'utils/typography'
 
 class ReadNext extends React.Component {
   render () {
     const { pages, post } = this.props
     const { readNext } = post
-    console.log(readNext);
     let nextPost
     if (readNext) {
       nextPost = find(pages, (page) =>
@@ -28,21 +26,10 @@ class ReadNext extends React.Component {
 
       return (
         <div>
-          <h6
-            style={{
-              ...scale(-0.5),
-              margin: 0,
-              letterSpacing: -0.25,
-            }}
-          >
+          <h6>
             READ THIS NEXT:
           </h6>
-          <h3
-            style={{
-              marginTop: 0,
-              marginBottom: rhythm(1/4),
-            }}
-          >
+          <h3>
             <Link
               to={{
                 pathname: prefixLink(nextPost.path),
@@ -63,8 +50,8 @@ class ReadNext extends React.Component {
 }
 
 ReadNext.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array,
+  post: PropTypes.object.isRequired,
+  pages: PropTypes.array
 }
 
 export default ReadNext

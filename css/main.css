@@ -1,5 +1,9 @@
-body {
-  background: yellow;
+#react-mount {
+  min-width: 100%;
+}
+
+#react-mount > [data-reactroot] {
+  min-width: 100% !important;
 }
 
 #code-input {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from '../../components/common/header.js'
+import Footer from '../../components/common/footer.js'
 
 class Media extends Component {
   render () {
@@ -12,6 +13,7 @@ class Media extends Component {
         <h1>Media page</h1>
       </section>
 
+      <Footer />
     </div>
     )
   }

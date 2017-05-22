@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Header from '../../components/common/header.js'
+import Footer from '../../components/common/footer.js'
 
 class Careers extends Component {
   render () {
@@ -12,6 +13,7 @@ class Careers extends Component {
         <h1>Careers page</h1>
       </section>
 
+      <Footer />
     </div>
     )
   }
