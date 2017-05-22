@@ -9,8 +9,9 @@ const BUILD_TIME = new Date().getTime()
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
-    body: React.PropTypes.string,
+    body: React.PropTypes.string
   },
+
   render () {
     const { body } = this.props
     const head = Helmet.rewind();
@@ -29,6 +30,8 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css" />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Oswald|Raleway" />
           {head.title.toComponent()}
           {head.meta.toComponent()}
           <TypographyStyle typography={typography} />

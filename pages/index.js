@@ -9,6 +9,8 @@ import { config } from 'config'
 import include from 'underscore.string/include'
 import Bio from 'components/Bio'
 
+import '../css/main.css'
+
 class BlogIndex extends React.Component {
   render () {
     // Sort pages.
@@ -20,7 +22,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet
-          title={config.blogTitle}
+          title={config.text}
           meta={[
             {"name": "description", "content": "Sample blog"},
             {"name": "keywords", "content": "blog, articles"},

@@ -1,6 +1,6 @@
-const React = require('react')
-const DatePicker = require('./single-date-picker')
-require('react-dates/css/variables.scss')
+import React from 'react'
+import DatePicker from './single-date-picker'
+import 'react-dates/css/variables.scss'
 require('react-dates/css/styles.scss')
 
 class Post extends React.Component {
@@ -8,7 +8,7 @@ class Post extends React.Component {
     return (
       <div>
         <h1>{this.props.route.page.data.title}</h1>
-        <p>Word to the javascript yos</p>
+        <p>Word to the javascript yosssssss</p>
         <p>This is the best I think</p>
         <p>Cause you can now do stuff like... embed a date picker in your blog posts!</p>
         <DatePicker />

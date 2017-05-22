@@ -9,6 +9,7 @@ class ReadNext extends React.Component {
   render () {
     const { pages, post } = this.props
     const { readNext } = post
+    console.log(readNext);
     let nextPost
     if (readNext) {
       nextPost = find(pages, (page) =>

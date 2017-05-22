@@ -6,9 +6,9 @@ import { rhythm } from 'utils/typography'
 import { config } from 'config'
 import Bio from 'components/Bio'
 
-import '../css/zenburn.css'
+import '../css/main.css'
 
-class MarkdownWrapper extends React.Component {
+class MarkdownWrapperPosts extends React.Component {
   render () {
     const { route } = this.props
     const post = route.page.data
@@ -16,7 +16,7 @@ class MarkdownWrapper extends React.Component {
     return (
       <div className="markdown">
         <Helmet
-          title={`${post.title} | ${config.blogTitle}`}
+          title={`${post.title} | ${config.text}`}
         />
         <h1 style={{marginTop: 0}}>{post.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
@@ -40,8 +40,8 @@ class MarkdownWrapper extends React.Component {
   }
 }
 
-MarkdownWrapper.propTypes = {
+MarkdownWrapperPosts.propTypes = {
   route: React.PropTypes.object,
 }
 
-export default MarkdownWrapper
+export default MarkdownWrapperPosts
