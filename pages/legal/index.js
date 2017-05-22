@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import Header from '../../components/common/header.js'
 import Footer from '../../components/common/footer.js'
 
 class Legal extends Component {
-  render () {
+  render() {
+    const { markets } = this.props
+
     return (
       <div className="media-page">
       <Header />
@@ -12,13 +14,14 @@ class Legal extends Component {
       <section id="media-page">
         <h1>Legal page</h1>
       </section>
-
-      <Footer />
-
     </div>
     )
   }
 }
+
+// Legal.propTypes = {
+//   markets: PropTypes.array.isRequired
+// }
 
 export default Legal
 

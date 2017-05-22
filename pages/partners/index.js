@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import Header from '../../components/common/header.js'
 import Footer from '../../components/common/footer.js'
 
 class Partners extends Component {
-  render () {
+  render() {
+    const { markets } = this.props
+
     return (
       <div className="partners-page">
       <Header />
@@ -13,12 +15,14 @@ class Partners extends Component {
         <h1>Partners page</h1>
       </section>
 
-      <Footer />
-
     </div>
     )
   }
 }
+// 
+// Partners.propTypes = {
+//   markets: PropTypes.array.isRequired
+// }
 
 export default Partners
 

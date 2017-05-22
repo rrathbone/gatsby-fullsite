@@ -1,63 +1,48 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
+
+import FooterCities from './footerCities'
+import FooterLinks from './footerLinks'
 
 class Footer extends Component {
   render() {
+    const { markets } = this.props
+
+    let labels
+    let labelLength = false
+
+    for(let key in markets) {
+      if(markets.hasOwnProperty(key)) {
+        const val = markets[key]
+        // console.log('VAL', val);
+        labels = val
+        labelLength = true
+      }
+    }
+  // console.log('labels from footer', markets)
     return (
       <div className="footer">
         <footer>
+          <FooterLinks />
 
+          <div className="divider"></div>
 
-        <div className="row" id="main-footer">
-
-          <div className="col-md-2">
-            <ul>
-              <Link to="/about/"><li className="footer-links">About</li></Link>
-              <Link to="/ride/"><li className="footer-links">Ride</li></Link>
-              <Link to="/partners/"><li className="footer-links">Partners</li></Link>
-              <Link to="/"><li className="footer-links">Cities</li></Link>
-              <Link to="/media/"><li className="footer-links">Media & Features</li></Link>
-            </ul>
+          <div className="row" id="city-footer">
+            <h5>Top Cities</h5>
+            {markets.map((market, index) =>
+              <FooterCities
+               key={index}
+               market={market}
+            />)}
           </div>
-          <div className="col-md-2">
-            <ul>
-              <Link to="/careers/"><li className="footer-links">Careers</li></Link>
-              <Link to="/contact/"><li className="footer-links">Contact</li></Link>
-              <Link to="/help/"><li className="footer-links">Help</li></Link>
-              <Link to="/legal/"><li className="footer-links">Privacy</li></Link>
-              <Link to="/legal/"><li className="footer-links">Terms of Service</li></Link>
-            </ul>
-          </div>
-
-          <div className="col-md-4" id="footer-btn">
-            <div className="row btns">
-              <img className="footer-app-btn" src="" id="apple-footer"  alt="Apple Store"/>
-            </div>
-            <div className="row btns">
-              <img className="footer-app-btn" src="" id="google-footer" alt="Google Play Store"/>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="row" id="migo-social">
-              <Link to="/" className="footer-brand"><img src="" alt="" className="migo-logo footer"></img></Link>
-            </div>
-            <div className="row" id="social-media">
-              <a href="https://twitter.com/GetMigo?lang=en" target="_blank"><i className="fa fa-facebook fa-3x social-media-icons" id="linkedin-sm"></i></a>
-              <a href="https://www.linkedin.com/company-beta/16211431/" target="_blank"><i className="fa fa-linkedin fa-3x social-media-icons"></i></a>
-              <a href="https://twitter.com/GetMigo?lang=en" target="_blank"><i className="fa fa-instagram fa-3x social-media-icons"></i></a>
-              <a href="https://twitter.com/GetMigo?lang=en" target="_blank"><i className="fa fa-twitter fa-3x social-media-icons"></i></a>
-            </div>
-
-          </div>
-        </div>
-
-
         </footer>
       </div>
     )
   }
 }
 
+Footer.propTypes = {
+  markets: PropTypes.array
+}
 
 export default Footer
