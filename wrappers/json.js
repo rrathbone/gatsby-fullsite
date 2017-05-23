@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
 
-import City from '../components/city'
-import Careers from '../pages/careers'
+import City from '../pages/locations/city'
+
 import Footer from '../components/common/footer'
 
 import '../css/main.css'
 
 class JSONWrapper extends React.Component {
   render () {
-    // console.log(this.props);
+    console.log('MARKETS', this.props);
     const { route } = this.props
     const markets = route.page.data.markets
 

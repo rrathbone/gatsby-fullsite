@@ -5,6 +5,7 @@ import '../css/main.css'
 
 class MarkdownWrapperPosts extends React.Component {
   render () {
+    console.log(this.prosp);
     const { route } = this.props
     const data = route.page.data
 

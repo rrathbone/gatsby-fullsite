@@ -1,4 +1,4 @@
 blogTitle = "Rachelle's Awesome Blog"
 authorName = "Kyle Mathews"
 linkPrefix = "/gatsby-starter-blog"
-text = "this is some text"
+city = "this is a city page"

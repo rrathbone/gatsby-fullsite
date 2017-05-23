@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 
-import Header from '../../components/common/header.js'
 import Footer from '../../components/common/footer.js'
 
 class Legal extends Component {
@@ -9,12 +8,8 @@ class Legal extends Component {
 
     return (
       <div className="media-page">
-      <Header />
-
-      <section id="media-page">
         <h1>Legal page</h1>
-      </section>
-    </div>
+      </div>
     )
   }
 }

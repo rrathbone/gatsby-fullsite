@@ -8,7 +8,7 @@ async function renderMarkets() {
     const market = await response.json()
 
     return fs.outputFile(
-     `pages/careers/index.json`,
+     `pages/locations/index.json`,
       JSON.stringify(market, null, 2)
     )
   } catch (error) {

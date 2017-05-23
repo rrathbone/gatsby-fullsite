@@ -7,7 +7,6 @@ import { config } from 'config'
 import include from 'underscore.string/include'
 import "../styles/main.scss"
 
-import Header from '../components/common/header'
 import Footer from '../components/common/footer'
 
 class HomePage extends Component {
@@ -27,9 +26,8 @@ class HomePage extends Component {
             {"name": "keywords", "content": "blog, articles"},
           ]}
         />
-        <Header />
+
         <h1>Home page goes here</h1>
-        <Footer />
 
       </div>
     )

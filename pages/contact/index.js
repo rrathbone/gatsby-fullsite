@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 
-import Header from '../../components/common/header.js'
 import Footer from '../../components/common/footer.js'
 
 class Contact extends Component {
@@ -9,12 +8,8 @@ class Contact extends Component {
 
     return (
       <div className="contact-page">
-      <Header />
-
-      <section id="contact-page">
         <h1>Contact page</h1>
-      </section>
-    </div>
+      </div>
     )
   }
 }
