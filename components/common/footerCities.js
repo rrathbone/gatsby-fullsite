@@ -13,6 +13,7 @@ const FooterCities = ({ market }) => {
           <Link to={'/city/' + market.marketId} className="footer-city-links">{market.label}</Link>
           <Link to={'/city/' + market.marketId} className="footer-city-links">{market.label}</Link>
         </ul>
+        
       </div>
       <div className="col-md-2">
         <ul>

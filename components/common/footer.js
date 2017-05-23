@@ -14,12 +14,11 @@ class Footer extends Component {
     for(let key in markets) {
       if(markets.hasOwnProperty(key)) {
         const val = markets[key]
-        // console.log('VAL', val);
         labels = val
         labelLength = true
       }
     }
-  // console.log('labels from footer', markets)
+    
     return (
       <div className="footer">
         <footer>

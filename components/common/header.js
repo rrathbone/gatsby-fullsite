@@ -10,7 +10,15 @@ class Header extends Component {
         <nav className="navbar navbar-light">
           <Link to="/" className="navbar-brand"><img src="" alt="Migo logo" className="migo-logo"></img></Link>
           <ul className="nav navbar-nav">
-            <Link to="/careers/" className="nav-link">Careers</Link>
+            <li className="nav-item">
+              <Link to="/partners/" className="nav-link">Partners</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/ride/" className="nav-link">Ride</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about/" className="nav-link">About</Link>
+            </li>
           </ul>
         </nav>
       </div>
