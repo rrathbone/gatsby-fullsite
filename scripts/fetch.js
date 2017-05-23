@@ -7,6 +7,11 @@ async function renderMarkets() {
     const response = await fetch(url)
     const market = await response.json()
 
+    /*
+    
+    TODO: Create multiple files based on number of locations
+    
+    */
     return fs.outputFile(
      `pages/locations/index.json`,
       JSON.stringify(market, null, 2)
